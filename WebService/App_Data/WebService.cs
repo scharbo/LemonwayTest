@@ -13,14 +13,14 @@ using WebServices.Extension;
 [System.Web.Script.Services.ScriptService]
 public class WebService : System.Web.Services.WebService
 {
-    [WebMethod, TraceExtension]
+    [WebMethod]
     public int Fibonacci(int n)
     {
         Thread.Sleep(2000);
         return Business.Fibonacci.GetFibNumber(n);
     }
 
-    [WebMethod, TraceExtensionAttribute]
+    [WebMethod]
     public string XmlToJson(string xml)
     {
         try
